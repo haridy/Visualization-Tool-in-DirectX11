@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{390326e5-3c94-464d-ab0b-f1b7324b5b19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Optional">
+      <UniqueIdentifier>{e533e5e7-7c39-451e-82f2-cd2d1c3182fd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\DXUT.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\DXUTDevice9.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\DXUTDevice11.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\DXUTmisc.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Optional\DXUTcamera.h">
+      <Filter>Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="Optional\DXUTgui.h">
+      <Filter>Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="Optional\DXUTguiIME.h">
+      <Filter>Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="Optional\DXUTLockFreePipe.h">
+      <Filter>Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="Optional\DXUTres.h">
+      <Filter>Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="Optional\DXUTsettingsdlg.h">
+      <Filter>Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="Optional\ImeUi.h">
+      <Filter>Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="Optional\SDKmesh.h">
+      <Filter>Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="Optional\SDKmisc.h">
+      <Filter>Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="Optional\SDKsound.h">
+      <Filter>Optional</Filter>
+    </ClInclude>
+    <ClInclude Include="Optional\SDKwavefile.h">
+      <Filter>Optional</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\DXUTDevice9.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\DXUTDevice11.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\DXUTmisc.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\DXUT.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Optional\DXUTcamera.cpp">
+      <Filter>Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="Optional\DXUTgui.cpp">
+      <Filter>Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="Optional\DXUTguiIME.cpp">
+      <Filter>Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="Optional\DXUTres.cpp">
+      <Filter>Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="Optional\DXUTsettingsdlg.cpp">
+      <Filter>Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="Optional\ImeUi.cpp">
+      <Filter>Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="Optional\SDKmesh.cpp">
+      <Filter>Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="Optional\SDKmisc.cpp">
+      <Filter>Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="Optional\SDKsound.cpp">
+      <Filter>Optional</Filter>
+    </ClCompile>
+    <ClCompile Include="Optional\SDKwavefile.cpp">
+      <Filter>Optional</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

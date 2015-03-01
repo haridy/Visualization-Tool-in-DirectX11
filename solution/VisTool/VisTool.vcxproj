@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{18B32976-2B0C-46A4-A39E-42B2485CDAD3}</ProjectGuid>
+    <RootNamespace>VisTool</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="..\fx.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Program Files (x86)\Visual Leak Detector\include;$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files (x86)\Visual Leak Detector\lib\Win64;$(DXSDK_DIR)Lib\x64;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(DXSDK_DIR)Utilities\bin\x64;$(DXSDK_DIR)Utilities\bin\x86;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x64;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(DXSDK_DIR)Utilities\bin\x64;$(DXSDK_DIR)Utilities\bin\x86;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\external\rply-1.1.1;..\..\..\external\AntTweakBar_115\include;..\DXUT11\Core;..\DXUT11\Optional;..\Effects11\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)DXUT11\$(Platform)\$(Configuration)\;$(SolutionDir)Effects11\$(Platform)\$(Configuration)\;$(SolutionDir)..\..\external\rply-1.1.1\;$(SolutionDir)..\..\external\AntTweakBar_115\lib\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>AntTweakBar64.lib;AntTweakBar.lib;DXUT11.lib;Effects11.lib;d3dcompiler.lib;d3dx11d.lib;d3dx9d.lib;dxerr.lib;dxguid.lib;comctl32.lib;%(AdditionalDependencies);winmm.lib</AdditionalDependencies>
+    </Link>
+    <FX_HLSL>
+      <TargetProfile>7</TargetProfile>
+    </FX_HLSL>
+    <PostBuildEvent>
+      <Command>(ROBOCOPY ..\..\..\external\AntTweakBar_115\lib\ $(OutDir) AntTweakBar64.dll /XO) ^&amp; IF %ERRORLEVEL% LEQ 1 exit 0</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\..\external\rply-1.1.1;..\..\..\external\AntTweakBar_115\include;..\DXUT11\Core;..\DXUT11\Optional;..\Effects11\Inc;..\external\AntTweakBar_115\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)DXUT11\$(Platform)\$(Configuration)\;$(SolutionDir)Effects11\$(Platform)\$(Configuration)\;$(SolutionDir)..\..\external\rply-1.1.1\;$(SolutionDir)..\..\external\AntTweakBar_115\lib\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>AntTweakBar64.lib;AntTweakBar.lib;DXUT11.lib;Effects11.lib;d3dcompiler.lib;d3dx11.lib;d3dx9.lib;dxerr.lib;dxguid.lib;comctl32.lib;%(AdditionalDependencies);winmm.lib</AdditionalDependencies>
+    </Link>
+    <FX_HLSL>
+      <TargetProfile>7</TargetProfile>
+      <OptimizationLevel>3</OptimizationLevel>
+    </FX_HLSL>
+    <PostBuildEvent>
+      <Command>(ROBOCOPY ..\..\..\external\AntTweakBar_115\lib\ $(OutDir) AntTweakBar64.dll /XO) ^&amp; IF %ERRORLEVEL% LEQ 1 exit 0</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\external\rply-1.1.1\rply.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="src\tools.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="TransferFunctionEditor.h" />
+    <ClInclude Include="TransferFunctionLine.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FX_HLSL Include="src\effect.fx" />
+    <FX_HLSL Include="TransferFunctionEditor.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\external\rply-1.1.1\rply.c" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="TransferFunctionEditor.cpp" />
+    <ClCompile Include="TransferFunctionLine.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\fx.targets" />
+  </ImportGroup>
+</Project>

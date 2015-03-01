@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="..\..\..\external\rply-1.1.1\rply.c" />
+    <ClCompile Include="TransferFunctionLine.cpp" />
+    <ClCompile Include="TransferFunctionEditor.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <FX_HLSL Include="src\effect.fx" />
+    <FX_HLSL Include="TransferFunctionEditor.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\tools.h" />
+    <ClInclude Include="..\..\..\external\rply-1.1.1\rply.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="TransferFunctionEditor.h" />
+    <ClInclude Include="TransferFunctionLine.h" />
+  </ItemGroup>
+</Project>
